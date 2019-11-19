@@ -1,0 +1,25 @@
+def make_turtle(x, y):
+    t = turtle.Turtle()
+    jump(t, x, y)    # Use of the function defined above
+    return t
+    def rectangle(x, y, width, height, color):
+    t = make_turtle(x, y)
+    t.hideturtle()
+    t.fillcolor(color)
+    t.begin_fill()
+    for dist in [width, height, width, height]:
+        t.forward(dist)
+        t.left(90)
+    t.end_fill()
+    def tricolore(x, y, h):
+    w = h/2  	#The width of the color field
+    rectangle(x, y, w, h, 'blue')
+    rectangle(x+w, y, w, h, 'white')
+    rectangle(x+2*w, y, w, h, 'red')
+    def pentagram(x, y, side):
+    t = make_turtle(x, y)
+    t.hideturtle()
+    t.setheading(270 - 36/2)
+    for i in range(5):
+        t.forward(side)
+        t.left(180-36)
